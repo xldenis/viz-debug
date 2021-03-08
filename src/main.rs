@@ -1,10 +1,19 @@
 #![feature(const_generics)]
 #![feature(const_evaluatable_checked)]
 
-use tui::widgets::Widget;
+use tui::{buffer::Buffer, layout::Rect, widgets::Widget};
 
 struct Matrix<const WIDTH: usize, const HEIGHT: usize> where [bool; WIDTH * HEIGHT] : Sized {
   elems: [bool; WIDTH * HEIGHT],
+}
+
+fn fill_block(buf: &mut Buffer, area: Rect, sym: &str) {
+  for x in area.left()..area.right() {
+    for y in area.top()..area.bottom() {
+      // dbg!(x,y);
+      buf.get_mut(x, y).set_symbol(sym);
+    }
+  }
 }
 
 impl<const WIDTH: usize, const HEIGHT: usize> Widget for Matrix<WIDTH, HEIGHT>
@@ -19,15 +28,16 @@ where [bool; WIDTH * HEIGHT] : Sized
           return;
         }
 
+        let scale_factor = ((area.right() - area.left()) / (2 * WIDTH) as u16).min((area.bottom() - area.top()) / HEIGHT as u16);
 
         for x in 0..WIDTH {
           for y in 0..HEIGHT {
             let offset = x + y * WIDTH;
-
+            let area = Rect::new(x as u16 * 2 * scale_factor, y as u16 * scale_factor, 2 * scale_factor, scale_factor);
             if self.elems[offset] {
-              buf.get_mut(area.left() + x as u16, area.top() + y as u16).set_symbol("█");
+              fill_block(buf, area, "█");
             } else {
-              buf.get_mut(area.left() + x as u16, area.top() + y as u16).set_symbol(".");
+              fill_block(buf, area, ".");
             }
           }
         }
@@ -101,11 +111,10 @@ fn main() -> Result<(), Box<dyn Error>> {
 
         let m = Matrix::<ROWS, COLS> { elems: arr };
         terminal.draw(|f| f.render_widget(m, f.size())).unwrap();
-        thread::sleep(time::Duration::from_millis(90));
+        thread::sleep(time::Duration::from_millis(20));
       }
     });
 
-    input.join().unwrap();
     output.join().unwrap();
     Ok(())
 }
