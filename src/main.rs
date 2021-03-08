@@ -45,13 +45,25 @@ use termion::event::Key;
 use termion::input::TermRead;
 
 use std::sync::{RwLock, Arc};
+use std::path::PathBuf;
+
+const ROWS : usize = 11;
+const COLS : usize = 10;
+
+use structopt::StructOpt;
+#[derive(Debug, StructOpt)]
+struct Opts {
+  path: PathBuf,
+}
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let mut port = serialport::new("/dev/cu.usbmodem14401", 115_200)
-      .timeout(time::Duration::from_millis(250))
+    let opts = Opts::from_args();
+
+    let mut port = serialport::new(opts.path.to_string_lossy(), 115_200)
+      .timeout(time::Duration::from_millis(1000))
     .open().unwrap();
 
-    let mut stdin = io::stdin();
+    let stdin = io::stdin();
 
     let stdout = io::stdout().into_raw_mode()?;
     let stdout = MouseTerminal::from(stdout);
@@ -81,13 +93,13 @@ fn main() -> Result<(), Box<dyn Error>> {
         port.clear(ClearBuffer::Input).unwrap();
 
         let _ = (&mut port).bytes().take_while(|b| *b.as_ref().unwrap() != '\n' as u8);
-        let mut buf = vec![0; 10 * 11];
+        let mut buf = vec![0; ROWS * COLS];
         (&mut port).read_exact(buf.as_mut_slice()).unwrap();
 
-        let mut arr = [false; 10 * 11];
+        let mut arr = [false; ROWS * COLS];
         buf.into_iter().zip(arr.iter_mut()).for_each(|(c, a)| *a = c == '1' as u8);
 
-        let m = Matrix::<11, 10> { elems: arr };
+        let m = Matrix::<ROWS, COLS> { elems: arr };
         terminal.draw(|f| f.render_widget(m, f.size())).unwrap();
         thread::sleep(time::Duration::from_millis(90));
       }
