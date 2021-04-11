@@ -54,7 +54,7 @@ where
     }
 }
 
-use rosc::{OscBundle, OscMessage, OscPacket, OscTime, OscType::Bool};
+use rosc::{OscBundle, OscMessage, OscPacket, OscTime, OscType::{Bool, Float, Int}};
 use std::convert::TryFrom;
 use std::time::SystemTime;
 
@@ -96,7 +96,7 @@ use std::path::PathBuf;
 use std::sync::{Arc, RwLock};
 
 const ROWS: usize = 11;
-const COLS: usize = 10;
+const COLS: usize = 9;
 
 use structopt::StructOpt;
 #[derive(Debug, StructOpt)]
@@ -164,7 +164,7 @@ fn debug(mut port: Box<dyn SerialPort>) -> std::io::Result<()> {
 fn server(mut serial: Box<dyn SerialPort>, port: u32) -> std::io::Result<()> {
   use std::net::UdpSocket;
 
-  let socket = UdpSocket::bind("127.0.0.1:0").unwrap();
+  let socket = UdpSocket::bind("192.168.0.46:0").unwrap();
   loop {
         serial.clear(ClearBuffer::Input).unwrap();
 
@@ -179,12 +179,17 @@ fn server(mut serial: Box<dyn SerialPort>, port: u32) -> std::io::Result<()> {
             .zip(arr.iter_mut())
             .for_each(|(c, a)| *a = c == '1' as u8);
 
+        for i in &arr {
+            if *i { print!("1"); } else { print!("0"); }
+        }
+        println!("");
+
         let m = Matrix::<ROWS, COLS> { elems: arr };
         let packet = emit_message(m);
 
         socket.send_to(
           &rosc::encoder::encode(&packet).unwrap(),
-          format!("127.0.0.1:{}", port)
+          format!("192.168.0.36:{}", port)
         ).unwrap();
   };
 }
