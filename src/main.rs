@@ -58,17 +58,21 @@ use rosc::{OscBundle, OscMessage, OscPacket, OscTime, OscType::{Bool, Float, Int
 use std::convert::TryFrom;
 use std::time::SystemTime;
 
-fn emit_message<const W: usize, const H: usize>(mat: Matrix<W, H>) -> OscPacket
+fn emit_message<const W: usize, const H: usize>(old: &Matrix<W, H>, mat: &Matrix<W, H>) -> OscPacket
 where
     [bool; W * H]: Sized,
 {
     let mut msgs = Vec::new();
     for x in 0..W {
         for y in 0..H {
-            msgs.push(OscPacket::Message(OscMessage {
-                addr: format!("/matrix/{}/{}", x, y),
-                args: vec![Bool(mat.elems[x + y * W])],
-            }));
+            let pos = x + y * W;
+
+            if old.elems[pos] != mat.elems[pos] {
+                msgs.push(OscPacket::Message(OscMessage {
+                    addr: format!("/matrix/{}/{}", x, y),
+                    args: vec![Bool(mat.elems[pos])],
+                }));
+            }
         }
     }
     let time = SystemTime::now();
@@ -164,6 +168,7 @@ fn server(mut serial: Box<dyn SerialPort>, port: u32) -> std::io::Result<()> {
   use std::net::UdpSocket;
 
   let socket = UdpSocket::bind("192.168.0.46:0").unwrap();
+  let mut prev_iter = Matrix::<ROWS, COLS> { elems: [false; ROWS * COLS]};
   loop {
         serial.clear(ClearBuffer::Input).unwrap();
 
@@ -178,7 +183,8 @@ fn server(mut serial: Box<dyn SerialPort>, port: u32) -> std::io::Result<()> {
             .for_each(|(c, a)| *a = c == '1' as u8);
 
         let m = Matrix::<ROWS, COLS> { elems: arr };
-        let packet = emit_message(m);
+        let packet = emit_message(&prev_iter, &m);
+        prev_iter = m;
 
         socket.send_to(
           &rosc::encoder::encode(&packet).unwrap(),
