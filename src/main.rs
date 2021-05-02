@@ -108,7 +108,6 @@ use Opts::*;
 
 fn debug(mut port: Box<dyn SerialPort>) -> std::io::Result<()> {
     let stdin = io::stdin();
-
     let stdout = io::stdout().into_raw_mode()?;
     let stdout = MouseTerminal::from(stdout);
     let stdout = AlternateScreen::from(stdout);
@@ -154,7 +153,7 @@ fn debug(mut port: Box<dyn SerialPort>) -> std::io::Result<()> {
 
         let m = Matrix::<ROWS, COLS> { elems: arr };
         terminal.draw(|f| f.render_widget(m, f.size())).unwrap();
-        thread::sleep(time::Duration::from_millis(20));
+        thread::sleep(time::Duration::from_millis(30));
     });
 
     output.join().unwrap();
@@ -173,16 +172,10 @@ fn server(mut serial: Box<dyn SerialPort>, port: u32) -> std::io::Result<()> {
             .take_while(|b| *b.as_ref().unwrap() != '\n' as u8);
         let mut buf = vec![0; ROWS * COLS];
         (&mut serial).read_exact(buf.as_mut_slice()).unwrap();
-
         let mut arr = [false; ROWS * COLS];
         buf.into_iter()
             .zip(arr.iter_mut())
             .for_each(|(c, a)| *a = c == '1' as u8);
-
-        for i in &arr {
-            if *i { print!("1"); } else { print!("0"); }
-        }
-        println!("");
 
         let m = Matrix::<ROWS, COLS> { elems: arr };
         let packet = emit_message(m);
