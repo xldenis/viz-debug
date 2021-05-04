@@ -167,7 +167,7 @@ fn debug(mut port: Box<dyn SerialPort>) -> std::io::Result<()> {
 fn server(mut serial: Box<dyn SerialPort>, port: u32) -> std::io::Result<()> {
   use std::net::UdpSocket;
 
-  let socket = UdpSocket::bind("192.168.0.46:0").unwrap();
+  let socket = UdpSocket::bind("192.168.0.33:0").unwrap();
   let mut prev_iter = Matrix::<ROWS, COLS> { elems: [false; ROWS * COLS]};
   loop {
         serial.clear(ClearBuffer::Input).unwrap();

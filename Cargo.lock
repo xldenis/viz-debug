@@ -282,9 +282,8 @@ checksum = "b5eb417147ba9860a96cfe72a0b93bf88fee1744b5636ec99ab20c1aa9376581"
 
 [[package]]
 name = "rosc"
-version = "0.5.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "44f303c9e8b5c2334e84ff00307ee1615bae04a3a60bf997b161e57f8a7deae1"
+version = "0.5.2-alpha.0"
+source = "git+https://github.com/klingtnet/rosc?branch=i686-osc-time-conditional#edaf5caf0413a52fe0307c782ddc47bbbd8b1800"
 dependencies = [
  "byteorder",
 ]

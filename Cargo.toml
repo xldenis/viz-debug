@@ -11,4 +11,4 @@ tui = "0.14"
 termion = "*"
 serialport = "*"
 structopt = "*"
-rosc = "*"
+rosc = { git = "https://github.com/klingtnet/rosc", branch = "i686-osc-time-conditional" }
