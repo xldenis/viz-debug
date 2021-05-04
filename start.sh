@@ -1,1 +1,1 @@
-echo '/dev/tty0 9990; /dev/tty1 9991; /dev/tty2 9992' | xargs -d ';' cargo run server
+echo '/dev/ttyACM0 9990; /dev/ttyACM1 9991; /dev/ttyACM2 9992; /dev/ttyACM3 9993; /dev/ttyACM4 9994' | xargs -d ';' cargo run server
