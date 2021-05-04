@@ -67,10 +67,10 @@ where
         for y in 0..H {
             let pos = x + y * W;
 
-            if old.elems[pos] != mat.elems[pos] {
+            if mat.elems[pos] && !old.elems[pos] {
                 msgs.push(OscPacket::Message(OscMessage {
-                    addr: format!("/matrix/{}/{}", x, y),
-                    args: vec![Bool(mat.elems[pos])],
+                    addr: format!("/matrix/button"),
+                    args: vec![Int(x as i32), Int(y as i32)],
                 }));
             }
         }
