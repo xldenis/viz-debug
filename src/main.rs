@@ -10,6 +10,17 @@ where
     elems: [bool; WIDTH * HEIGHT],
 }
 
+impl<const WIDTH: usize, const HEIGHT : usize>  Matrix<WIDTH, HEIGHT>
+    where [bool; WIDTH * HEIGHT]: Sized,
+{
+    fn empty(&self) -> bool {
+        let mut b = true;
+        for e in &self.elems {
+            b = b && !e;
+        }
+        b
+    }
+}
 fn fill_block(buf: &mut Buffer, area: Rect, sym: &str) {
     for x in area.left()..area.right() {
         for y in area.top()..area.bottom() {
@@ -75,6 +86,14 @@ where
             }
         }
     }
+
+    if mat.empty() && ! old.empty() {
+        msgs.push(OscPacket::Message(OscMessage {
+            addr: format!("/matrix/button"),
+            args: vec![Int(0 as i32), Int(0 as i32)],
+        }));
+    }
+
     let time = SystemTime::now();
 
     let bundle = OscBundle {
