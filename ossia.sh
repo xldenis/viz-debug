@@ -20,4 +20,4 @@ export MAIL=/var/mail/pi
 export SSH_TTY=/dev/pts/0
 export LC_NUMERIC=fr_FR.UTF-8
 export TEXTDOMAIN=Linux-PAM
-/home/pi/Downloads/ossia-score-master/bin/ossia-score --no-gui --autoplay --no-restore /home/pi/viz-debug/bricemarie.score
+/home/pi/Downloads/ossia-3.0.0-a34/bin/ossia-score --no-gui --autoplay --no-restore /home/pi/viz-debug/bricemarie.score
