@@ -1,0 +1,23 @@
+export LC_ADDRESS=fr_FR.UTF-8
+export LC_NAME=fr_FR.UTF-8
+export LC_MONETARY=fr_FR.UTF-8
+export NO_AT_BRIDGE=1
+export XDG_SESSION_TYPE=tty
+export LC_PAPER=fr_FR.UTF-8
+export LANG=en_GB.UTF-8
+export XDG_SESSION_CLASS=user
+export TERM=xterm-256color
+export LC_IDENTIFICATION=fr_FR.UTF-8
+export SHLVL=1
+export LC_TELEPHONE=fr_FR.UTF-8
+export LC_MEASUREMENT=fr_FR.UTF-8
+export XDG_SESSION_ID=4
+export XDG_RUNTIME_DIR=/run/user/1000
+export LC_TIME=fr_FR.UTF-8
+export PATH=/home/pi/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+export MAIL=/var/mail/pi
+export SSH_TTY=/dev/pts/0
+export LC_NUMERIC=fr_FR.UTF-8
+export TEXTDOMAIN=Linux-PAM
+/home/pi/Downloads/ossia-score-master/bin/ossia-score --no-gui --autoplay --no-restore /home/pi/viz-debug/bricemarie.score

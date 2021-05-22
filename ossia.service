@@ -1,0 +1,14 @@
+[Unit]
+Description=Ossia Score
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+WorkingDirectory=/home/pi/viz-debug
+Restart=on-failure
+RestartSec=5s
+ExecStart=bash ossia.sh
+
+[Install]
+WantedBy=multi-user.target
