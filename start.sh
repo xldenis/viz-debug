@@ -1,1 +1,1 @@
-echo '/dev/ttyACM0 9990 /dev/ttyACM1 9991 /dev/ttyACM2 9992 /dev/ttyACM3 9993 /dev/ttyACM4 9994' | xargs -P 10 -n2 cargo run server
+echo '/dev/sensor0 9990 /dev/sensor1 9991 /dev/sensor2 9992 /dev/sensor3 9993 /dev/sensor4 9994 /dev/sensor5 9995 /dev/sensor6 9996 /dev/sensor7 9997 /dev/sensor8 9998 /dev/sensor9 9999' | xargs -P 10 -n2 /home/pi/.cargo/bin/cargo run server
