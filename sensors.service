@@ -12,4 +12,4 @@ RestartSec=5s
 ExecStart=bash start.sh
 
 [Install]
-WantedBy=network-online.service
+WantedBy=multi-user.target
