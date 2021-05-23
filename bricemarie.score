@@ -140,6 +140,46 @@
                         "TimeNodes": [
                             {
                                 "ObjectName": "Scenario::TimeSyncModel",
+                                "id": 57,
+                                "Metadata": {
+                                    "ScriptingName": "Sync.aces22",
+                                    "Comment": "",
+                                    "Color": "Gray",
+                                    "Label": "",
+                                    "Touched": true
+                                },
+                                "Date": 2927709909,
+                                "Events": [
+                                    57
+                                ],
+                                "MusicalSync": 1.0,
+                                "AutoTrigger": false,
+                                "Start": false,
+                                "Active": false,
+                                "Expression": " { true == false } "
+                            },
+                            {
+                                "ObjectName": "Scenario::TimeSyncModel",
+                                "id": 56,
+                                "Metadata": {
+                                    "ScriptingName": "Sync.yank81",
+                                    "Comment": "",
+                                    "Color": "Gray",
+                                    "Label": "",
+                                    "Touched": true
+                                },
+                                "Date": 2469600000,
+                                "Events": [
+                                    56
+                                ],
+                                "MusicalSync": 1.0,
+                                "AutoTrigger": false,
+                                "Start": false,
+                                "Active": false,
+                                "Expression": " { true == false } "
+                            },
+                            {
+                                "ObjectName": "Scenario::TimeSyncModel",
                                 "id": 55,
                                 "Metadata": {
                                     "ScriptingName": "Sync.gate52.1",
@@ -148,7 +188,7 @@
                                     "Label": "",
                                     "Touched": true
                                 },
-                                "Date": 1764000000,
+                                "Date": 2469600000,
                                 "Events": [
                                     55
                                 ],
@@ -168,7 +208,7 @@
                                     "Label": "",
                                     "Touched": true
                                 },
-                                "Date": 7761600000,
+                                "Date": 8467200000,
                                 "Events": [
                                     54
                                 ],
@@ -648,7 +688,7 @@
                                     "Label": "",
                                     "Touched": true
                                 },
-                                "Date": 4939200000,
+                                "Date": 5644800000,
                                 "Events": [
                                     29
                                 ],
@@ -668,7 +708,7 @@
                                     "Label": "",
                                     "Touched": true
                                 },
-                                "Date": 1058400000,
+                                "Date": 1764000000,
                                 "Events": [
                                     30
                                 ],
@@ -742,6 +782,42 @@
                         "Events": [
                             {
                                 "ObjectName": "Scenario::EventModel",
+                                "id": 57,
+                                "Metadata": {
+                                    "ScriptingName": "Event.hose9",
+                                    "Comment": "",
+                                    "Color": "Emphasis4",
+                                    "Label": "",
+                                    "Touched": true
+                                },
+                                "TimeNode": 57,
+                                "States": [
+                                    101
+                                ],
+                                "Condition": "",
+                                "Date": 2927709909,
+                                "Offset": 0
+                            },
+                            {
+                                "ObjectName": "Scenario::EventModel",
+                                "id": 56,
+                                "Metadata": {
+                                    "ScriptingName": "Event.loge81",
+                                    "Comment": "",
+                                    "Color": "Emphasis4",
+                                    "Label": "",
+                                    "Touched": true
+                                },
+                                "TimeNode": 56,
+                                "States": [
+                                    100
+                                ],
+                                "Condition": "",
+                                "Date": 2469600000,
+                                "Offset": 0
+                            },
+                            {
+                                "ObjectName": "Scenario::EventModel",
                                 "id": 55,
                                 "Metadata": {
                                     "ScriptingName": "Event.told26.1",
@@ -756,7 +832,7 @@
                                     97
                                 ],
                                 "Condition": "",
-                                "Date": 1764000000,
+                                "Date": 2469600000,
                                 "Offset": 0
                             },
                             {
@@ -775,7 +851,7 @@
                                     96
                                 ],
                                 "Condition": "",
-                                "Date": 7761600000,
+                                "Date": 8467200000,
                                 "Offset": 0
                             },
                             {
@@ -1224,7 +1300,8 @@
                                 "TimeNode": 24,
                                 "States": [
                                     39,
-                                    36
+                                    36,
+                                    99
                                 ],
                                 "Condition": "",
                                 "Date": 1411200000,
@@ -1246,7 +1323,7 @@
                                     48
                                 ],
                                 "Condition": "",
-                                "Date": 4939200000,
+                                "Date": 5644800000,
                                 "Offset": 0
                             },
                             {
@@ -1265,7 +1342,7 @@
                                     46
                                 ],
                                 "Condition": "",
-                                "Date": 1058400000,
+                                "Date": 1764000000,
                                 "Offset": 0
                             },
                             {
@@ -1329,6 +1406,190 @@
                         "States": [
                             {
                                 "ObjectName": "Scenario::StateModel",
+                                "id": 101,
+                                "Metadata": {
+                                    "ScriptingName": "State.mars56",
+                                    "Comment": "",
+                                    "Color": "Base1",
+                                    "Label": "",
+                                    "Touched": true
+                                },
+                                "Event": 57,
+                                "PreviousConstraint": 61,
+                                "NextConstraint": null,
+                                "HeightPercentage": 0.546363825797041,
+                                "Messages": {
+                                    "Name": "",
+                                    "Accessors": [],
+                                    "Unit": "none",
+                                    "Previous": [],
+                                    "Following": [],
+                                    "User": null,
+                                    "Priorities": [
+                                        1,
+                                        2,
+                                        0
+                                    ],
+                                    "Children": [
+                                        {
+                                            "Name": "louispierre2",
+                                            "Accessors": [],
+                                            "Unit": "none",
+                                            "Previous": [],
+                                            "Following": [],
+                                            "User": null,
+                                            "Priorities": [
+                                                1,
+                                                2,
+                                                0
+                                            ],
+                                            "Children": [
+                                                {
+                                                    "Name": "echo2",
+                                                    "Accessors": [],
+                                                    "Unit": "none",
+                                                    "Previous": [],
+                                                    "Following": [],
+                                                    "User": null,
+                                                    "Priorities": [
+                                                        1,
+                                                        2,
+                                                        0
+                                                    ],
+                                                    "Children": [
+                                                        {
+                                                            "Name": "trigger2",
+                                                            "Accessors": [],
+                                                            "Unit": "none",
+                                                            "Previous": [],
+                                                            "Following": [],
+                                                            "User": {
+                                                                "Bool": false
+                                                            },
+                                                            "Priorities": [
+                                                                1,
+                                                                2,
+                                                                0
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "Controls": [],
+                                "StateProcesses": []
+                            },
+                            {
+                                "ObjectName": "Scenario::StateModel",
+                                "id": 100,
+                                "Metadata": {
+                                    "ScriptingName": "State.whig84",
+                                    "Comment": "",
+                                    "Color": "Base1",
+                                    "Label": "",
+                                    "Touched": true
+                                },
+                                "Event": 56,
+                                "PreviousConstraint": 60,
+                                "NextConstraint": 61,
+                                "HeightPercentage": 0.546363825797041,
+                                "Messages": {
+                                    "Name": "",
+                                    "Accessors": [],
+                                    "Unit": "none",
+                                    "Previous": [],
+                                    "Following": [],
+                                    "User": null,
+                                    "Priorities": [
+                                        1,
+                                        2,
+                                        0
+                                    ],
+                                    "Children": [
+                                        {
+                                            "Name": "louispierre2",
+                                            "Accessors": [],
+                                            "Unit": "none",
+                                            "Previous": [],
+                                            "Following": [],
+                                            "User": null,
+                                            "Priorities": [
+                                                1,
+                                                2,
+                                                0
+                                            ],
+                                            "Children": [
+                                                {
+                                                    "Name": "echo2",
+                                                    "Accessors": [],
+                                                    "Unit": "none",
+                                                    "Previous": [],
+                                                    "Following": [],
+                                                    "User": null,
+                                                    "Priorities": [
+                                                        1,
+                                                        2,
+                                                        0
+                                                    ],
+                                                    "Children": [
+                                                        {
+                                                            "Name": "trigger2",
+                                                            "Accessors": [],
+                                                            "Unit": "none",
+                                                            "Previous": [],
+                                                            "Following": [],
+                                                            "User": {
+                                                                "Bool": true
+                                                            },
+                                                            "Priorities": [
+                                                                1,
+                                                                2,
+                                                                0
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "Controls": [],
+                                "StateProcesses": []
+                            },
+                            {
+                                "ObjectName": "Scenario::StateModel",
+                                "id": 99,
+                                "Metadata": {
+                                    "ScriptingName": "State.mimi59",
+                                    "Comment": "",
+                                    "Color": "Base1",
+                                    "Label": "",
+                                    "Touched": true
+                                },
+                                "Event": 24,
+                                "PreviousConstraint": null,
+                                "NextConstraint": 60,
+                                "HeightPercentage": 0.546363825797041,
+                                "Messages": {
+                                    "Name": "",
+                                    "Accessors": [],
+                                    "Unit": "none",
+                                    "Previous": [],
+                                    "Following": [],
+                                    "User": null,
+                                    "Priorities": [
+                                        1,
+                                        2,
+                                        0
+                                    ]
+                                },
+                                "Controls": [],
+                                "StateProcesses": []
+                            },
+                            {
+                                "ObjectName": "Scenario::StateModel",
                                 "id": 98,
                                 "Metadata": {
                                     "ScriptingName": "State.alva40.1",
@@ -1340,7 +1601,7 @@
                                 "Event": 0,
                                 "PreviousConstraint": null,
                                 "NextConstraint": 57,
-                                "HeightPercentage": 0.45015664773672978,
+                                "HeightPercentage": 0.45036502448188506,
                                 "Messages": {
                                     "Name": "",
                                     "Accessors": [],
@@ -1430,7 +1691,7 @@
                                 "Event": 54,
                                 "PreviousConstraint": 58,
                                 "NextConstraint": null,
-                                "HeightPercentage": 0.45015664773672978,
+                                "HeightPercentage": 0.45036502448188506,
                                 "Messages": {
                                     "Name": "",
                                     "Accessors": [],
@@ -1460,7 +1721,7 @@
                                 "Event": 55,
                                 "PreviousConstraint": 57,
                                 "NextConstraint": 58,
-                                "HeightPercentage": 0.45015664773672978,
+                                "HeightPercentage": 0.45036502448188506,
                                 "Messages": {
                                     "Name": "",
                                     "Accessors": [],
@@ -2270,7 +2531,7 @@
                                 "Event": 39,
                                 "PreviousConstraint": null,
                                 "NextConstraint": 41,
-                                "HeightPercentage": 0.22087934986455513,
+                                "HeightPercentage": 0.2208793498645552,
                                 "Messages": {
                                     "Name": "",
                                     "Accessors": [],
@@ -3230,7 +3491,7 @@
                                 "Event": 0,
                                 "PreviousConstraint": null,
                                 "NextConstraint": 28,
-                                "HeightPercentage": 0.5006153476844758,
+                                "HeightPercentage": 0.5051996360778911,
                                 "Messages": {
                                     "Name": "",
                                     "Accessors": [],
@@ -3260,7 +3521,7 @@
                                 "Event": 30,
                                 "PreviousConstraint": 28,
                                 "NextConstraint": 29,
-                                "HeightPercentage": 0.5006153476844758,
+                                "HeightPercentage": 0.5051996360778911,
                                 "Messages": {
                                     "Name": "",
                                     "Accessors": [],
@@ -3290,7 +3551,7 @@
                                 "Event": 29,
                                 "PreviousConstraint": 29,
                                 "NextConstraint": null,
-                                "HeightPercentage": 0.5006153476844758,
+                                "HeightPercentage": 0.5051996360778911,
                                 "Messages": {
                                     "Name": "",
                                     "Accessors": [],
@@ -3581,6 +3842,166 @@
                         "Constraints": [
                             {
                                 "ObjectName": "Scenario::IntervalModel",
+                                "id": 61,
+                                "Metadata": {
+                                    "ScriptingName": "Interval.clay56",
+                                    "Comment": "",
+                                    "Color": "Transparent1",
+                                    "Label": "",
+                                    "Touched": true
+                                },
+                                "Inlet": {
+                                    "uuid": "a1574bb0-cbd4-4c7d-9417-0c25cfd1187b",
+                                    "ObjectName": "Inlet",
+                                    "id": 0,
+                                    "Hidden": false,
+                                    "Custom": "Audio in",
+                                    "Exposed": "audio in"
+                                },
+                                "Outlet": {
+                                    "uuid": "a1d97535-18ac-444a-8417-0cbc1692d897",
+                                    "ObjectName": "Outlet",
+                                    "id": 0,
+                                    "Hidden": false,
+                                    "Custom": "Audio out",
+                                    "Exposed": "audio out",
+                                    "GainInlet": {
+                                        "uuid": "9a13fb32-269a-47bf-99a9-930188c1f19c",
+                                        "ObjectName": "Inlet",
+                                        "id": 0,
+                                        "Hidden": false,
+                                        "Custom": "Gain",
+                                        "Exposed": "gain",
+                                        "Value": {},
+                                        "Domain": {
+                                            "Float": {
+                                                "Min": 0.0,
+                                                "Max": 1.0
+                                            }
+                                        }
+                                    },
+                                    "PanInlet": {
+                                        "uuid": "9a13fb32-269a-47bf-99a9-930188c1f19c",
+                                        "ObjectName": "Inlet",
+                                        "id": 1,
+                                        "Hidden": false,
+                                        "Custom": "Pan",
+                                        "Exposed": "pan",
+                                        "Value": {},
+                                        "Domain": {}
+                                    },
+                                    "Gain": 1.0,
+                                    "Pan": [
+                                        1.0,
+                                        1.0
+                                    ],
+                                    "Propagate": true
+                                },
+                                "Processes": [],
+                                "SmallViewRack": [],
+                                "FullViewRack": [],
+                                "DefaultDuration": 458109909,
+                                "MinDuration": 458109909,
+                                "MaxDuration": 458109909,
+                                "GuiDuration": 141120000,
+                                "Speed": 1.0,
+                                "Rigidity": true,
+                                "MinNull": false,
+                                "MaxInf": false,
+                                "Signatures": [],
+                                "StartState": 100,
+                                "EndState": 101,
+                                "StartDate": 2469600000,
+                                "HeightPercentage": 0.546363825797041,
+                                "NodalSlotHeight": 100.0,
+                                "Zoom": -1.0,
+                                "Center": 0,
+                                "ViewMode": 0,
+                                "SmallViewShown": false,
+                                "HasSignature": false
+                            },
+                            {
+                                "ObjectName": "Scenario::IntervalModel",
+                                "id": 60,
+                                "Metadata": {
+                                    "ScriptingName": "Interval.pear42",
+                                    "Comment": "",
+                                    "Color": "Transparent1",
+                                    "Label": "",
+                                    "Touched": true
+                                },
+                                "Inlet": {
+                                    "uuid": "a1574bb0-cbd4-4c7d-9417-0c25cfd1187b",
+                                    "ObjectName": "Inlet",
+                                    "id": 0,
+                                    "Hidden": false,
+                                    "Custom": "Audio in",
+                                    "Exposed": "audio in"
+                                },
+                                "Outlet": {
+                                    "uuid": "a1d97535-18ac-444a-8417-0cbc1692d897",
+                                    "ObjectName": "Outlet",
+                                    "id": 0,
+                                    "Hidden": false,
+                                    "Custom": "Audio out",
+                                    "Exposed": "audio out",
+                                    "GainInlet": {
+                                        "uuid": "9a13fb32-269a-47bf-99a9-930188c1f19c",
+                                        "ObjectName": "Inlet",
+                                        "id": 0,
+                                        "Hidden": false,
+                                        "Custom": "Gain",
+                                        "Exposed": "gain",
+                                        "Value": {},
+                                        "Domain": {
+                                            "Float": {
+                                                "Min": 0.0,
+                                                "Max": 1.0
+                                            }
+                                        }
+                                    },
+                                    "PanInlet": {
+                                        "uuid": "9a13fb32-269a-47bf-99a9-930188c1f19c",
+                                        "ObjectName": "Inlet",
+                                        "id": 1,
+                                        "Hidden": false,
+                                        "Custom": "Pan",
+                                        "Exposed": "pan",
+                                        "Value": {},
+                                        "Domain": {}
+                                    },
+                                    "Gain": 1.0,
+                                    "Pan": [
+                                        1.0,
+                                        1.0
+                                    ],
+                                    "Propagate": true
+                                },
+                                "Processes": [],
+                                "SmallViewRack": [],
+                                "FullViewRack": [],
+                                "DefaultDuration": 1058400000,
+                                "MinDuration": 1058400000,
+                                "MaxDuration": 1058400000,
+                                "GuiDuration": 1164240000,
+                                "Speed": 1.0,
+                                "Rigidity": true,
+                                "MinNull": false,
+                                "MaxInf": false,
+                                "Signatures": [],
+                                "StartState": 99,
+                                "EndState": 100,
+                                "StartDate": 1411200000,
+                                "HeightPercentage": 0.546363825797041,
+                                "NodalSlotHeight": 100.0,
+                                "Zoom": -1.0,
+                                "Center": 0,
+                                "ViewMode": 0,
+                                "SmallViewShown": false,
+                                "HasSignature": false
+                            },
+                            {
+                                "ObjectName": "Scenario::IntervalModel",
                                 "id": 59,
                                 "Metadata": {
                                     "ScriptingName": "Interval.pars50.1",
@@ -3595,9 +4016,9 @@
                                 "MaxDuration": 0,
                                 "GuiDuration": 141120000,
                                 "Speed": 1.0,
-                                "Rigidity": true,
-                                "MinNull": false,
-                                "MaxInf": false,
+                                "Rigidity": false,
+                                "MinNull": true,
+                                "MaxInf": true,
                                 "StartState": 96,
                                 "EndState": 97,
                                 "StartDate": 12852134402,
@@ -3661,134 +4082,6 @@
                                     "Propagate": true
                                 },
                                 "Processes": [
-                                    {
-                                        "uuid": "d2a67bd8-5d3f-404e-b6e9-e350cf2a833f",
-                                        "ObjectName": "Automation",
-                                        "id": 2,
-                                        "Metadata": {
-                                            "ScriptingName": "Automation (float).2",
-                                            "Comment": "",
-                                            "Color": "Transparent1",
-                                            "Label": "",
-                                            "Touched": false
-                                        },
-                                        "Duration": 5997600000,
-                                        "Height": 300.0,
-                                        "StartOffset": 0,
-                                        "LoopDuration": 10584000000,
-                                        "Pos": [
-                                            60.0,
-                                            60.0
-                                        ],
-                                        "Size": [
-                                            200.0,
-                                            100.0
-                                        ],
-                                        "Loops": false,
-                                        "Outlet": {
-                                            "uuid": "047e4cc2-4d99-4e8b-bf98-206018d02274",
-                                            "ObjectName": "Outlet",
-                                            "id": 0,
-                                            "Hidden": false,
-                                            "Custom": "Out",
-                                            "Exposed": "out",
-                                            "MinInlet": {
-                                                "uuid": "af2b4fc3-aecb-4c15-a5aa-1c573a239925",
-                                                "ObjectName": "Inlet",
-                                                "id": 0,
-                                                "Hidden": false,
-                                                "Custom": "Control",
-                                                "Exposed": "control",
-                                                "Value": {
-                                                    "Float": 0.0
-                                                },
-                                                "Domain": {}
-                                            },
-                                            "MaxInlet": {
-                                                "uuid": "af2b4fc3-aecb-4c15-a5aa-1c573a239925",
-                                                "ObjectName": "Inlet",
-                                                "id": 1,
-                                                "Hidden": false,
-                                                "Custom": "Control",
-                                                "Exposed": "control",
-                                                "Value": {
-                                                    "Float": 0.800000011920929
-                                                },
-                                                "Domain": {}
-                                            }
-                                        },
-                                        "Curve": {
-                                            "ObjectName": "CurveModel",
-                                            "id": 45345,
-                                            "Segments": [
-                                                {
-                                                    "uuid": "1e7cb83f-4e47-4b14-814d-2242a9c75991",
-                                                    "ObjectName": "CurveSegmentModel",
-                                                    "id": 965753959,
-                                                    "Previous": null,
-                                                    "Following": -1472359003,
-                                                    "Start": [
-                                                        0.0,
-                                                        0.6666666666666667
-                                                    ],
-                                                    "End": [
-                                                        0.2974983096686951,
-                                                        0.6666666666666667
-                                                    ],
-                                                    "Power": 1.0
-                                                },
-                                                {
-                                                    "uuid": "1e7cb83f-4e47-4b14-814d-2242a9c75991",
-                                                    "ObjectName": "CurveSegmentModel",
-                                                    "id": -1472359003,
-                                                    "Previous": 965753959,
-                                                    "Following": 819140571,
-                                                    "Start": [
-                                                        0.2974983096686951,
-                                                        0.6666666666666667
-                                                    ],
-                                                    "End": [
-                                                        0.47391304347826088,
-                                                        0.16666666666666664
-                                                    ],
-                                                    "Power": 1.0
-                                                },
-                                                {
-                                                    "uuid": "1e7cb83f-4e47-4b14-814d-2242a9c75991",
-                                                    "ObjectName": "CurveSegmentModel",
-                                                    "id": 819140571,
-                                                    "Previous": -1472359003,
-                                                    "Following": 1,
-                                                    "Start": [
-                                                        0.47391304347826088,
-                                                        0.16666666666666664
-                                                    ],
-                                                    "End": [
-                                                        0.5892514395393474,
-                                                        0.0
-                                                    ],
-                                                    "Power": 1.0
-                                                },
-                                                {
-                                                    "uuid": "1e7cb83f-4e47-4b14-814d-2242a9c75991",
-                                                    "ObjectName": "CurveSegmentModel",
-                                                    "id": 1,
-                                                    "Previous": 819140571,
-                                                    "Following": null,
-                                                    "Start": [
-                                                        0.5892514395393474,
-                                                        0.0
-                                                    ],
-                                                    "End": [
-                                                        1.0019193857965452,
-                                                        0.0
-                                                    ],
-                                                    "Power": 1.0
-                                                }
-                                            ]
-                                        },
-                                        "Tween": false
-                                    },
                                     {
                                         "uuid": "63174570-d608-44bf-a9cb-e6f5a11f73cc",
                                         "ObjectName": "Sound",
@@ -3857,6 +4150,134 @@
                                         "Start": 0,
                                         "Mode": 0,
                                         "Tempo": 120.0
+                                    },
+                                    {
+                                        "uuid": "d2a67bd8-5d3f-404e-b6e9-e350cf2a833f",
+                                        "ObjectName": "Automation",
+                                        "id": 2,
+                                        "Metadata": {
+                                            "ScriptingName": "Automation (float).2",
+                                            "Comment": "",
+                                            "Color": "Transparent1",
+                                            "Label": "",
+                                            "Touched": false
+                                        },
+                                        "Duration": 5997600000,
+                                        "Height": 300.0,
+                                        "StartOffset": 0,
+                                        "LoopDuration": 10584000000,
+                                        "Pos": [
+                                            60.0,
+                                            60.0
+                                        ],
+                                        "Size": [
+                                            200.0,
+                                            100.0
+                                        ],
+                                        "Loops": false,
+                                        "Outlet": {
+                                            "uuid": "047e4cc2-4d99-4e8b-bf98-206018d02274",
+                                            "ObjectName": "Outlet",
+                                            "id": 0,
+                                            "Hidden": false,
+                                            "Custom": "Out",
+                                            "Exposed": "out",
+                                            "MinInlet": {
+                                                "uuid": "af2b4fc3-aecb-4c15-a5aa-1c573a239925",
+                                                "ObjectName": "Inlet",
+                                                "id": 0,
+                                                "Hidden": false,
+                                                "Custom": "Control",
+                                                "Exposed": "control",
+                                                "Value": {
+                                                    "Float": 0.0
+                                                },
+                                                "Domain": {}
+                                            },
+                                            "MaxInlet": {
+                                                "uuid": "af2b4fc3-aecb-4c15-a5aa-1c573a239925",
+                                                "ObjectName": "Inlet",
+                                                "id": 1,
+                                                "Hidden": false,
+                                                "Custom": "Control",
+                                                "Exposed": "control",
+                                                "Value": {
+                                                    "Float": 0.800000011920929
+                                                },
+                                                "Domain": {}
+                                            }
+                                        },
+                                        "Curve": {
+                                            "ObjectName": "CurveModel",
+                                            "id": 45345,
+                                            "Segments": [
+                                                {
+                                                    "uuid": "1e7cb83f-4e47-4b14-814d-2242a9c75991",
+                                                    "ObjectName": "CurveSegmentModel",
+                                                    "id": 1,
+                                                    "Previous": 819140571,
+                                                    "Following": null,
+                                                    "Start": [
+                                                        0.5892514395393474,
+                                                        0.0
+                                                    ],
+                                                    "End": [
+                                                        1.0019193857965452,
+                                                        0.0
+                                                    ],
+                                                    "Power": 1.0
+                                                },
+                                                {
+                                                    "uuid": "1e7cb83f-4e47-4b14-814d-2242a9c75991",
+                                                    "ObjectName": "CurveSegmentModel",
+                                                    "id": 819140571,
+                                                    "Previous": -1472359003,
+                                                    "Following": 1,
+                                                    "Start": [
+                                                        0.47391304347826088,
+                                                        0.16666666666666664
+                                                    ],
+                                                    "End": [
+                                                        0.5892514395393474,
+                                                        0.0
+                                                    ],
+                                                    "Power": 1.0
+                                                },
+                                                {
+                                                    "uuid": "1e7cb83f-4e47-4b14-814d-2242a9c75991",
+                                                    "ObjectName": "CurveSegmentModel",
+                                                    "id": -1472359003,
+                                                    "Previous": 965753959,
+                                                    "Following": 819140571,
+                                                    "Start": [
+                                                        0.2974983096686951,
+                                                        0.6666666666666667
+                                                    ],
+                                                    "End": [
+                                                        0.47391304347826088,
+                                                        0.16666666666666664
+                                                    ],
+                                                    "Power": 1.0
+                                                },
+                                                {
+                                                    "uuid": "1e7cb83f-4e47-4b14-814d-2242a9c75991",
+                                                    "ObjectName": "CurveSegmentModel",
+                                                    "id": 965753959,
+                                                    "Previous": null,
+                                                    "Following": -1472359003,
+                                                    "Start": [
+                                                        0.0,
+                                                        0.6666666666666667
+                                                    ],
+                                                    "End": [
+                                                        0.2974983096686951,
+                                                        0.6666666666666667
+                                                    ],
+                                                    "Power": 1.0
+                                                }
+                                            ]
+                                        },
+                                        "Tween": false
                                     }
                                 ],
                                 "SmallViewRack": [
@@ -3898,8 +4319,8 @@
                                 "Signatures": [],
                                 "StartState": 94,
                                 "EndState": 95,
-                                "StartDate": 1764000000,
-                                "HeightPercentage": 0.45015664773672978,
+                                "StartDate": 2469600000,
+                                "HeightPercentage": 0.45036502448188506,
                                 "NodalSlotHeight": 100.0,
                                 "Zoom": -1.0,
                                 "Center": 0,
@@ -3967,9 +4388,9 @@
                                 "Processes": [],
                                 "SmallViewRack": [],
                                 "FullViewRack": [],
-                                "DefaultDuration": 1764000000,
-                                "MinDuration": 705600000,
-                                "MaxDuration": 4611686018427387903,
+                                "DefaultDuration": 2469600000,
+                                "MinDuration": 2469600000,
+                                "MaxDuration": 2469600000,
                                 "GuiDuration": 8537760000,
                                 "Speed": 1.0,
                                 "Rigidity": false,
@@ -3979,7 +4400,7 @@
                                 "StartState": 98,
                                 "EndState": 94,
                                 "StartDate": 0,
-                                "HeightPercentage": 0.45015664773672978,
+                                "HeightPercentage": 0.45036502448188506,
                                 "NodalSlotHeight": 100.0,
                                 "Zoom": -1.0,
                                 "Center": 0,
@@ -4984,7 +5405,7 @@
                                                     "Previous": 1000292384,
                                                     "Following": -1868196249,
                                                     "Start": [
-                                                        0.43409490333919156,
+                                                        0.4340949033391916,
                                                         1.0
                                                     ],
                                                     "End": [
@@ -5004,7 +5425,7 @@
                                                         1.0
                                                     ],
                                                     "End": [
-                                                        0.43409490333919156,
+                                                        0.4340949033391916,
                                                         1.0
                                                     ],
                                                     "Power": 1.0
@@ -5448,7 +5869,7 @@
                                                     "Previous": -31766945,
                                                     "Following": -1446270056,
                                                     "Start": [
-                                                        0.20652173913043476,
+                                                        0.2065217391304348,
                                                         1.0
                                                     ],
                                                     "End": [
@@ -5468,7 +5889,7 @@
                                                         1.0
                                                     ],
                                                     "End": [
-                                                        0.20652173913043476,
+                                                        0.2065217391304348,
                                                         1.0
                                                     ],
                                                     "Power": 1.0
@@ -8398,7 +8819,7 @@
                                                     "Following": 1697634231,
                                                     "Start": [
                                                         0.14782608695652175,
-                                                        0.41509433962264155
+                                                        0.4150943396226416
                                                     ],
                                                     "End": [
                                                         0.28078817733990149,
@@ -8418,7 +8839,7 @@
                                                     ],
                                                     "End": [
                                                         0.14782608695652175,
-                                                        0.41509433962264155
+                                                        0.4150943396226416
                                                     ],
                                                     "Power": 1.0
                                                 }
@@ -8559,7 +8980,7 @@
                                 "Processes": [],
                                 "SmallViewRack": [],
                                 "FullViewRack": [],
-                                "DefaultDuration": 1058400000,
+                                "DefaultDuration": 1764000000,
                                 "MinDuration": 10584000000,
                                 "MaxDuration": 4611686018427387903,
                                 "GuiDuration": 16299360000,
@@ -8571,7 +8992,7 @@
                                 "StartState": 45,
                                 "EndState": 46,
                                 "StartDate": 0,
-                                "HeightPercentage": 0.5006153476844758,
+                                "HeightPercentage": 0.5051996360778911,
                                 "NodalSlotHeight": 100.0,
                                 "Zoom": -1.0,
                                 "Center": 0,
@@ -8736,8 +9157,8 @@
                                                     "Previous": -473634050,
                                                     "Following": -741575413,
                                                     "Start": [
-                                                        0.17507418397626113,
-                                                        0.7
+                                                        0.16753926701570683,
+                                                        1.0
                                                     ],
                                                     "End": [
                                                         0.35906040268456376,
@@ -8756,8 +9177,8 @@
                                                         0.0
                                                     ],
                                                     "End": [
-                                                        0.17507418397626113,
-                                                        0.7
+                                                        0.16753926701570683,
+                                                        1.0
                                                     ],
                                                     "Power": 1.0
                                                 }
@@ -8874,8 +9295,8 @@
                                 "Signatures": [],
                                 "StartState": 46,
                                 "EndState": 47,
-                                "StartDate": 1058400000,
-                                "HeightPercentage": 0.5006153476844758,
+                                "StartDate": 1764000000,
+                                "HeightPercentage": 0.5051996360778911,
                                 "NodalSlotHeight": 100.0,
                                 "Zoom": -1.0,
                                 "Center": 0,
@@ -9198,7 +9619,7 @@
                                                     "Following": 1,
                                                     "Start": [
                                                         0.2391304347826087,
-                                                        0.31343283582089556
+                                                        0.3134328358208956
                                                     ],
                                                     "End": [
                                                         0.3891625615763547,
@@ -9218,7 +9639,7 @@
                                                     ],
                                                     "End": [
                                                         0.2391304347826087,
-                                                        0.31343283582089556
+                                                        0.3134328358208956
                                                     ],
                                                     "Power": 1.0
                                                 },
@@ -9604,8 +10025,8 @@
                 "StartDate": 0,
                 "HeightPercentage": 0.0,
                 "NodalSlotHeight": 100.0,
-                "Zoom": 20508513.119401277,
-                "Center": 9249425522,
+                "Zoom": 10165659.409068067,
+                "Center": 3283473470,
                 "ViewMode": 0,
                 "SmallViewShown": false,
                 "HasSignature": true
@@ -11215,9 +11636,9 @@
                     "Device": {
                         "Name": "louispierre",
                         "Protocol": "9a42de4b-f6eb-4bca-9564-01b975f601b9",
-                        "OutputPort": 10000,
-                        "InputPort": 10001,
-                        "Host": "192.168.1.101"
+                        "OutputPort": 10002,
+                        "InputPort": 10004,
+                        "Host": "192.168.1.102"
                     },
                     "Children": [
                         {
@@ -11235,10 +11656,44 @@
                                         "ClipMode": "Free",
                                         "RepetitionFilter": false,
                                         "Value": {
-                                            "Bool": false
+                                            "Int": 0
                                         },
                                         "Domain": {},
                                         "Name": "trigger"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Device": {
+                        "Name": "louispierre2",
+                        "Protocol": "9a42de4b-f6eb-4bca-9564-01b975f601b9",
+                        "OutputPort": 10000,
+                        "InputPort": 10001,
+                        "Host": "192.168.1.101"
+                    },
+                    "Children": [
+                        {
+                            "Address": {
+                                "ClipMode": "Free",
+                                "RepetitionFilter": false,
+                                "Value": {},
+                                "Domain": {},
+                                "Name": "echo2"
+                            },
+                            "Children": [
+                                {
+                                    "Address": {
+                                        "ioType": "<->",
+                                        "ClipMode": "Free",
+                                        "RepetitionFilter": false,
+                                        "Value": {
+                                            "Bool": false
+                                        },
+                                        "Domain": {},
+                                        "Name": "trigger2"
                                     }
                                 }
                             ]
