@@ -1,0 +1,15 @@
+[Unit]
+Description=Sensor 4
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/viz-debug
+Restart=on-failure
+RestartSec=5s
+ExecStart=cargo run server /dev/sensor4 9994
+
+[Install]
+WantedBy=multi-user.target
