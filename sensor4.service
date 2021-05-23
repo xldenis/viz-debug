@@ -9,7 +9,7 @@ User=pi
 WorkingDirectory=/home/pi/viz-debug
 Restart=on-failure
 RestartSec=5s
-ExecStart=cargo run server /dev/sensor4 9994
+ExecStart=/home/pi/.cargo/bin/cargo run server /dev/sensor4 9994
 
 [Install]
 WantedBy=multi-user.target
